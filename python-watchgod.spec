@@ -3,7 +3,7 @@
 Summary:	A simple, modern file watching and code reload in python
 Name:		python-%{module}
 Version:	0.8.2
-Release:	1
+Release:	2
 License:	Expat
 Url:		https://github.com/samuelcolvin/watchgod
 Group:		Development/Languages/Python
