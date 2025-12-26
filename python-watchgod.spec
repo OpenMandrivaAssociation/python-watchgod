@@ -3,14 +3,15 @@
 Summary:	A simple, modern file watching and code reload in python
 Name:		python-%{module}
 Version:	0.8.2
-Release:	2
+Release:	3
 License:	Expat
 Url:		https://github.com/samuelcolvin/watchgod
 Group:		Development/Languages/Python
 Source:		https://files.pythonhosted.org/packages/source/w/%{module}/%{module}-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python3dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pip)
 
 BuildArch:	noarch
 
@@ -26,7 +27,7 @@ debouncing changes and bugs which weren't being fixed)
 %license LICENSE
 %doc README.md
 %{_bindir}/%{module}
-%{python_sitelib}/*
+#{python_sitelib}/*
 
 #----------------------------------------------------------------------------
 
