@@ -7,7 +7,8 @@ Release:	3
 License:	Expat
 Url:		https://github.com/samuelcolvin/watchgod
 Group:		Development/Languages/Python
-Source:		https://files.pythonhosted.org/packages/source/w/%{module}/%{module}-%{version}.tar.gz
+Source0:		https://files.pythonhosted.org/packages/source/w/%{module}/%{module}-%{version}.tar.gz
+Patch0:     relax-anyio-deps.patch
 
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(setuptools)
@@ -33,7 +34,7 @@ debouncing changes and bugs which weren't being fixed)
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{module}-%{version}
+%autosetup -n %{module}-%{version} -p1
 
 %build
 %py_build
