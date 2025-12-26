@@ -27,7 +27,8 @@ debouncing changes and bugs which weren't being fixed)
 %license LICENSE
 %doc README.md
 %{_bindir}/%{module}
-#{python_sitelib}/*
+%{python_sitelib}/watchgod-%{version}-py*.*.egg-info
+%{python_sitelib}/watchgod/
 
 #----------------------------------------------------------------------------
 
